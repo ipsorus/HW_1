@@ -31,7 +31,7 @@ if __name__ == "__main__":
         class_name = group['school_class']
         class_scores = group['scores']
         res = main()
-        all_school_score.append(res)  #Складываем в список средние баллы всех классов
-        all_school_average = mean(all_school_score) #Средний балл по всей школе
+        all_school_score.append(res)  #Складываем в список средние баллы всех классов  
         print(f'{class_name} имеет средний балл:', round(res, 2))
+    all_school_average = mean(all_school_score) #Средний балл по всей школе   
     print(f'Средний балл по школе:', round(all_school_average, 2))
