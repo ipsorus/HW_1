@@ -23,15 +23,16 @@ my_school = [{'school_class': '1а', 'scores': [3,4,4,5,2,5,5]},
             {'school_class': '3в', 'scores': [5,5,5,2,2,4,3,4,5,4,5,4,5]}]
 
 def main():
-    return mean(class_scores)
-
-if __name__ == "__main__":
     all_school_score = []
     for group in my_school:
         class_name = group['school_class']
         class_scores = group['scores']
-        res = main()
-        all_school_score.append(res)  #Складываем в список средние баллы всех классов  
-        print(f'{class_name} имеет средний балл:', round(res, 2))
-    all_school_average = mean(all_school_score) #Средний балл по всей школе   
-    print(f'Средний балл по школе:', round(all_school_average, 2))
+        res = mean(class_scores)
+        all_school_score.append(res)#Складываем в список средние баллы всех классов
+        print('{} имеет средний балл: {:.2f}'.format(class_name,res))
+    all_school_average = mean(all_school_score) #Средний балл по всей школе
+    print('Средний балл по школе: {:.2f}'.format(all_school_average))
+        
+
+if __name__ == "__main__":
+    main()
